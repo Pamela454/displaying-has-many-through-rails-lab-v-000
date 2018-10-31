@@ -3,6 +3,6 @@ class Appointment < ActiveRecord::Base
   belongs_to :doctor
 
   def datetime_convert
-    self.appointment_datetime.to_s
+    self.appointment_datetime.strftime(%A, %d %b %Y %l:%M %p)
   end
 end
